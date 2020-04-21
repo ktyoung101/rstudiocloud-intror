@@ -1,0 +1,41 @@
+---
+title: "ggplot2movies excercise"
+output: html_notebook
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(ggplot2movies)
+```
+
+```{r}
+install.packages('ggplot2movies')
+```
+
+```{r}
+library('ggplot2movies')
+
+```
+
+```{r}
+
+write_csv(movies, "movies.csv")     
+
+```
+
+```{r}
+movies_raw = read_csv("movies.csv")
+```
+
+```{r}
+movies_raw %>% 
+filter(Action == 1)
+```
+
+```{r}
+movies_raw %>% 
+filter(length<360)
+```
+
+
