@@ -25,3 +25,43 @@ diameter = 12 # This is in inches
 pi * (diameter/2)^2
 ```
 
+
+```{r}
+iris
+```
+
+  git config --global user.email "kay23@cam.ac.uk"
+  git config --global user.name "Katherine Young"
+  
+  
+```{r}
+diameter = 2
+c(
+'this is text',
+"Use speech marks when having apostrophe'"
+)
+
+
+```
+  
+  
+  
+  
+```{r}
+as.integer(TRUE)
+Sys.time()
+Sys.timezone()
+'“Do you think this is a game?”, he said. “No, I think Jenga’s a game”, Archer responded.'
+
+
+```
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
