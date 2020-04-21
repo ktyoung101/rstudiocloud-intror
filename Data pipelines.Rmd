@@ -1,0 +1,63 @@
+---
+title: "Data pipelines"
+output: html_notebook
+---
+
+Data pipelines use the tidyverse style of doing things
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+write_csv(iris, "iris.csv")
+```
+
+## Read
+
+```{r}
+iris_raw = read_csv("iris.csv")
+```
+
+```{r}
+DataExplorer::create_report(iris_raw, y= "Species")
+```
+
+Querying rows
+
+top n tails
+```{r}
+iris_raw %>% 
+  tail(10)
+
+iris_raw %>% 
+  sample_n(10)
+
+iris_raw %>% 
+  sample_frac(0.05)
+```
+
+WHERE
+
+```{r}
+iris_raw %>% 
+  filter(Species=="setosa"| Sepal.Length < mean (Sepal.Length))
+iris_raw %>% 
+  filter(Sepal.Width<4)
+```
+
+```{r}
+TRUE & FALSE
+```
+
+```{r}
+iris_raw %>% 
+  filter_if(is.numeric, any_vars(.< 5 ))
+
+```
+
+
+
+```{r}
+write_csv (ggplot2movies "ggplot2movies.csv")
+```
