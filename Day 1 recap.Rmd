@@ -1,0 +1,17 @@
+---
+title: "Day 1 Recap"
+output: html_notebook
+---
+
+1. Shared/cloud coding environment 
+2. Source control - can see history of coding 
+3. Issues on github- can alter settings to determine who sees it
+4. Reproducible research via literate programming 
+5. R
++ Packages
++ Functions 
++ Data types 
++ Objects (vector - single data type)
+          (matricies and arrays- 2D structures)
+          (data frame- mix of columns with different data types )
++tidyverse- data pipelines 

@@ -59,5 +59,27 @@ iris_raw %>%
 
 
 ```{r}
-write_csv (ggplot2movies "ggplot2movies.csv")
+iris %>% 
+  select(Sepal.Length)
+
+iris %>% 
+  select(-Sepal.Length)
+
+iris %>% 
+  select(Sepal.Length:Petal.Width)
+
+iris %>% 
+  select(starts_with('sepal'))
+
+iris %>% 
+  select_if(is.numeric) %>% 
+prcomp()
+
 ```
+
+```{r}
+iris %>% 
+  mutate (Sepal.Length = Sepal.Length - 0.1,
+         Sepal.Area = Sepal.Length* Sepal.Width)
+```
+

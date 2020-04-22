@@ -8,6 +8,11 @@ library(tidyverse)
 ```{r}
 library(ggplot2movies)
 ```
+```{r}
+movies
+```
+
+
 
 ```{r}
 install.packages('ggplot2movies')
@@ -35,7 +40,22 @@ filter(Action == 1)
 
 ```{r}
 movies_raw %>% 
-filter(length<360)
+filter(length < 6*60) ->
+movies_longlength 
+
 ```
 
+```{r}
+movies %>% 
+filter_at(vars(Action:Short),all_vars(.==0) )
+```
+
+
+```{r}
+movies_raw %>% 
+
+rename(budget_if_known = budget) ->
+movies_cleaned 
+
+```
 
