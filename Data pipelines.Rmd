@@ -79,7 +79,27 @@ prcomp()
 
 ```{r}
 iris %>% 
-  mutate (Sepal.Length = Sepal.Length - 0.1,
+  mutate(Sepal.Length = Sepal.Length - 0.1,
          Sepal.Area = Sepal.Length* Sepal.Width)
+```
+
+Aggregating our data 
+groups
+aggregation=summarise
+
+```{r}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(count = n(), avg.sepal.length = mean(Sepal.Length))
+
+iris %>% 
+  group_by (Species) %>% 
+  summarise_all (mean) %>% 
+
+
+
+iris %>% 
+  group_by(Species) %>% 
+  mutate (Species.Diff.Sepal.Length = (Sepal.Length - mean (Sepal.Length))/mean (Sepal.Length))
 ```
 

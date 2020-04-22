@@ -61,7 +61,51 @@ Sys.timezone()
 '“Do you think this is a game?”'
 
 ```
- 
+ git config --global user.name "Katherine Young"
+git config --global user.email kay23@camac.uk
+
+  
+```{r}
+ex_vector = c(1, 2, 3, 4, 5)
+ex_vector = 1:5
+ex_vector = 5:-5
+pi*ex_vector^2
+letters
+sum(1:5)
+```
+  
+```{r}
+t(matrix(LETTERS, nrow=13))
+ex_matrix = matrix(LETTERS, nrow=13)
+
+ex_matrix[1:5]
+ex_matrix[2, 2]
+
+```
+
+```{r}
+array(LETTERs(1:24),c(2,2,6))
+```
+
+```{r}
+data.frame(
+id = 1:5,
+name = letters[1:5],
+outcome = rnorm(5)
+)
+```
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

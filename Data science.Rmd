@@ -1,0 +1,31 @@
+---
+title: "Data Science"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(AppliedPredictiveModeling)
+data(AlzheimerDisease)
+alzheimers <- predictors %>% cbind(diagnosis)
+install.packages("skimr")
+alzheimers %>% skimr::skim_to_wide() %>% head()
+```
+
+```{r}
+DataExplorer::create_report(alzheimers, y = "diagnosis")
+```
+
+```{r}
+library(tidyverse)
+library(AppliedPredictiveModeling)
+library(DataExplorer)
+library(naniar)
+library("PASWR") 
+View(titanic3)
+titanic3 %>% skimr::skim_to_wide() %>% head()
+xray::distributions(titanic3)
+naniar::miss_prop_summary(titanic3)
+
+```
+
